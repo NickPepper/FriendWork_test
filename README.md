@@ -14,7 +14,7 @@ This project uses [Webpack](https://webpack.js.org/) for handling all assets.
 
 ## After cloning this repository you should do at first:
 
-### `npm install`
+#### `npm install`
 
 
 
