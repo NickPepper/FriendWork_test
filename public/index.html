@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>FriendWork TEST - React App with DataTables</title>
+    <script type="text/javascript" src="%PUBLIC_URL%/lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="%PUBLIC_URL%/lib/dataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="%PUBLIC_URL%/lib/dataTables/dataTables.responsive.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#FWtest').DataTable({
+                responsive: true,
+                columnDefs: [
+                    { responsivePriority: 2, targets: 0, className: 'all' },
+                    { responsivePriority: 10, targets: 8 },
+                    { responsivePriority: 9, targets: 7 },
+                    { responsivePriority: 8, targets: 6 },
+                    { responsivePriority: 7, targets: 5 },
+                    { responsivePriority: 6, targets: 4 },
+                    { responsivePriority: 5, targets: 3 },
+                    { responsivePriority: 4, targets: 2 },
+                    { responsivePriority: 3, targets: 1 },
+                    { responsivePriority: 1, targets: -1, className: 'all' }
+                ]
+            });
+        });
+    </script>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+  </body>
+</html>

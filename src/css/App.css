@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #ffffff;
+  height: 150px;
+  padding-top: 20px;
+  color: #333333;
+}
+
+.App-title {
+  font-size: 1.2em;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+p {
+  font-size: 12px;
+}
+
+
+
+/***********************************************************************************
+ *
+ * Overrides jQuery's responsive DataTables styles.
+ * 
+************************************************************************************/
+
+
+#FWtest_length,
+#FWtest_filter,
+#FWtest_info,
+#FWtest_paginate {
+  display: none;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  /*color: #7E84DE;*/
+  border-bottom: 1px solid silver;
+  color: #333333;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 20px 18px;
+}
+
+table.dataTable tfoot th,
+table.dataTable tfoot td {
+  background-color: #FFF0E9;
+  color: #444444;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 22px 16px;
+  border-bottom: 1px solid silver;
+  border-top: 1px solid silver;
+}
+
+
+table.dataTable.nowrap th,
+table.dataTable.nowrap td {
+  text-align: right;
+}
+
+
+table.dataTable.nowrap td:last-child {
+  color: #E4741E;
+  font-weight: bold;
+}
+
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+  font-size: 14px;
+  padding: 22px 16px;
+}
+
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+  background-color: #F5FAFE;
+}
+
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child > ul > li > span {
+  color: #333333;
+  font-weight: normal;
+  text-align: left;
+  width: 140px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before {
+  background-color: #E4741E;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #ffffee;
+  content: 'More details';
+  font-size: 10px;
+  height: 16px;
+  left: 30px;
+  line-height: 16px;
+  position: absolute;
+  right: 30px;
+  text-align: center;
+  top: 40px;
+  width: 70px;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+  background-color: #E4741E;
+  content: 'Hide details';
+}

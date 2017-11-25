@@ -1,0 +1,17 @@
+{
+  "short_name": "React DataTables",
+  "name": "React DataTables",
+  "description": "React DataTables test made by Nick Pershin. Copyright (c) 2017 Nick Pershin. All rights reserved!",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "lang": "en-US"
+}
