@@ -10,7 +10,8 @@ As a smart table was jQuery's [DataTables](https://datatables.net/) used.
 
 This project uses [Webpack](https://webpack.js.org/) for handling all assets.
 
-
+<br>
+<br>
 
 ## After cloning this repository you should do at first:
 
@@ -60,6 +61,8 @@ Flow is a static type checker that helps you write code with fewer bugs. Check o
 To learn more about Flow, check out [its documentation](https://flowtype.org/).
 
 
+<br>
+<br>
 
 ## Post-Processing CSS
 
@@ -93,6 +96,8 @@ becomes this:
 ```
 
 
+<br>
+<br>
 
 ## Using HTTPS in Development
 
