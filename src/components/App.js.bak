@@ -1,14 +1,16 @@
 // @flow
 
+//import React, { PropTypes } from 'react';
 import React, { Component } from 'react';
 // assets
-import logo from './images/logo.svg';
+import logo from '../images/logo.svg';
 // styles
-import "./css/jquery.dataTables.min.css";
-import "./css/responsive.dataTables.min.css";
-import './css/App.css';
+import "../css/jquery.dataTables.min.css";
+import "../css/responsive.dataTables.min.css";
+import '../css/App.css';
 
 
+//class App extends React.Component {
 class App extends Component {
   render() {
     return (
@@ -125,9 +127,18 @@ class App extends Component {
               </tr>
           </tfoot>
       </table>
+
+{/*      <div>
+        {this.props.children}
+      </div>
+*/}
     </div>
     );
   }
 }
+
+// App.propTypes = {  
+//   children: PropTypes.object.isRequired
+// };
 
 export default App;
