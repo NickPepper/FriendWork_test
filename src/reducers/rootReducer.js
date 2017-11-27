@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
-import cats from './catReducer';
-import hobbies from './hobbyReducer';
+import data from './datatablesReducer';
 
 const rootReducer = combineReducers({
-	// short hand property names ('cats', instead of 'cats: cats')
-	cats,
-	hobbies
+	// short hand property names ('data', instead of 'data: data')
+	data
 });
 
 export default rootReducer;

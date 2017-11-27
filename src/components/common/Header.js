@@ -1,5 +1,8 @@
+/*
+ * A functional component - stateless component
+ */
 import React from 'react';
-import logo from '../../images/logo.svg';
+import logo from '../../assets/images/logo.svg';
 
 const Header = () => {  
   return (

@@ -1,11 +1,10 @@
 // @flow
 
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
 // styles
-import "../css/jquery.dataTables.min.css";
-import "../css/responsive.dataTables.min.css";
-import '../css/App.css';
+import "../assets/styles/jquery.dataTables.min.css";
+import "../assets/styles/responsive.dataTables.min.css";
+import '../assets/styles/App.css';
 // components
 import Header from './common/Header';
 import DataTables from './datatables/DataTables';
