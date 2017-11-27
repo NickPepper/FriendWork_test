@@ -19,15 +19,14 @@ let mock = [
 class CatApi {  
   
 	static getAllCats() {
-		// REAL REQUEST:
-	    // return fetch('http://localhost:5000/api/v1/cats').then(response => {
-	    // 	return response.json();
-	    // }).catch(error => {
-	    // 	return error;
-	    // });
-
-	    // but for now lets return the MOCKED DATA:
-		return mock;
+	    return fetch('http://localhost:5000/api/v1/cats').then(response => {
+	    	return response.json();
+	    }).catch(error => {
+	    	//return error;
+	    	
+	    	// but for now lets return the MOCKED DATA:
+			return mock;
+	    });
 	}
 
 

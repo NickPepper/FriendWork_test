@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/configureStore';  
 import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import routes from './routes';
 import { loadCats } from './actions/catActions';
 import { loadHobbies } from './actions/hobbyActions';
@@ -17,7 +17,7 @@ store.dispatch(loadHobbies());
 
 ReactDOM.render(
 	<Provider store={store}>
-    	<Router history={browserHistory} routes={routes} />
+    	<BrowserRouter routes={routes} />
 	</Provider>,
 	document.getElementById('root')
 );

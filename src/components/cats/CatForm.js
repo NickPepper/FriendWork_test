@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import TextInput from '../common/TextInput';
 import CheckBox from '../common/CheckBox';
 
@@ -65,11 +66,11 @@ class CatForm extends Component {
 }
 
 CatForm.propTypes = {
-    cat: React.PropTypes.object.isRequired,
-    hobbies: React.PropTypes.array.isRequired,
-    onSave: React.PropTypes.func.isRequired,
-    onChange: React.PropTypes.func.isRequired,
-    onHobbyChange: React.PropTypes.func.isRequired
+    cat:            PropTypes.object.isRequired,
+    hobbies:        PropTypes.array.isRequired,
+    onSave:         PropTypes.func.isRequired,
+    onChange:       PropTypes.func.isRequired,
+    onHobbyChange:  PropTypes.func.isRequired
 };
 
 export default CatForm;

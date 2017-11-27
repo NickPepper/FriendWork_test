@@ -1,7 +1,7 @@
 // @flow
 
-//import React, { PropTypes } from 'react';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 // assets
 import logo from '../images/logo.svg';
 // styles
@@ -128,17 +128,17 @@ class App extends Component {
           </tfoot>
       </table>
 
-{/*      <div>
+      <div>
         {this.props.children}
       </div>
-*/}
+
     </div>
     );
   }
 }
 
-// App.propTypes = {  
-//   children: PropTypes.object.isRequired
-// };
+App.propTypes = {  
+  children: PropTypes.object.isRequired
+};
 
 export default App;

@@ -1,7 +1,8 @@
 /*
  * A presentational component
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as catActions from '../../actions/catActions';
@@ -14,15 +15,15 @@ class CatPage extends Component {
 	constructor(props, context) {
     	super(props, context);
     	this.state = {
-    		isEditing: false,
-    		cat: this.props.cat,
-    		catHobbies: this.props.catHobbies,
-    		checkBoxHobbies: this.props.checkBoxHobbies
+    		isEditing: 			false,
+    		cat: 				this.props.cat,
+    		catHobbies: 		this.props.catHobbies,
+    		checkBoxHobbies: 	this.props.checkBoxHobbies
     	};
-    	this.updateCatState = this.updateCatState.bind(this);
-    	this.updateCatHobbies = this.updateCatHobbies.bind(this);
-    	this.saveCat = this.saveCat.bind(this);
-    	this.toggleEdit = this.toggleEdit.bind(this);
+    	this.updateCatState 	= this.updateCatState.bind(this);
+    	this.updateCatHobbies 	= this.updateCatHobbies.bind(this);
+    	this.saveCat 			= this.saveCat.bind(this);
+    	this.toggleEdit 		= this.toggleEdit.bind(this);
 	}
 
 	updateCatState(event) {
@@ -35,7 +36,7 @@ class CatPage extends Component {
 	updateCatHobbies(event) {
 	    const cat = this.state.cat;
 	    const hobbyId = event.target.value;
-	    const hobby = this.state.checkBoxHobbies.filter(hobby => hobby.id  hobbyId)[0];
+	    const hobby = this.state.checkBoxHobbies.filter(hobby => hobby.id === hobbyId)[0];
 	    const checked = !hobby.checked;
 	    hobby['checked'] = !hobby.checked;
 	    if (checked) {
@@ -56,7 +57,7 @@ class CatPage extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-	    if (this.props.cat.id != nextProps.cat.id) {
+	    if (this.props.cat.id !== nextProps.cat.id) {
 	    	this.setState({cat: nextProps.cat});
 	    }
 	    if (this.props.checkBoxHobbies.length < nextProps.checkBoxHobbies.length) {
@@ -99,19 +100,27 @@ CatPage.propTypes = {
 };
 
 
+function getCatById(cats, id) {
+	let cat = cats.find(cat => cat.id === id);
+	return Object.assign({}, cat);
+}
+
+
 function collectCatHobbies(hobbies, cat) {
 	let selected = hobbies.map(hobby => {
-    	if (cat.hobby_ids.filter(hobbyId => hobbyId == hobby.id).length > 0) {
+    	if (cat.hobby_ids.filter(hobbyId => hobbyId === hobby.id).length > 0) {
     		return hobby;
+    	} else {
+    		return {id: 0, name: "UNKNOWN"};
     	}
 	});
-	return selected.filter(el => el != undefined);
+	return selected.filter(el => el !== "undefined");
 }
 
 
 function hobbiesForCheckBoxes(hobbies, cat=null) {
 	return hobbies.map(hobby => {
-	    if (cat && cat.hobby_ids.filter(hobbyId => hobbyId == hobby.id).length > 0) {
+	    if (cat && cat.hobby_ids.filter(hobbyId => hobbyId === hobby.id).length > 0) {
 	    	hobby['checked'] = true;
 	    } else {
 	    	hobby['checked'] = false;

@@ -1,7 +1,8 @@
 /*
  * A container component
  */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as catActions from '../../actions/catActions';
 import CatList from './CatList';
