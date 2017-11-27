@@ -8,10 +8,12 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 import { loadCats } from './actions/catActions';
+import { loadHobbies } from './actions/hobbyActions';
 //import registerServiceWorker from './registerServiceWorker';
 
 const store = configureStore();
 store.dispatch(loadCats());
+store.dispatch(loadHobbies());
 
 ReactDOM.render(
 	<Provider store={store}>

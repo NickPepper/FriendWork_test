@@ -6,8 +6,10 @@ import CatsPage from './components/cats/CatsPage';
 import CatPage from './components/cats/CatPage';
 
 export default (  
-  <Route path="/" component={App}>
-    <IndexRoute component={HomePage} />
-    <Route path="/cats" component={CatsPage} />
-  </Route>
+	<Route path="/" component={App}>
+    	<IndexRoute component={HomePage} />
+    	<Route path="/cats" component={CatsPage} >
+    		<Route path="/cats/:id" component={CatPage} />
+    	</Route>
+	</Route>
 );
