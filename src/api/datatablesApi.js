@@ -10,15 +10,15 @@ let mock = [
 
 class DatatablesApi {  
   
-	static getDatatablesData() {
-	    return fetch('http://localhost:5000/api/v1/datatables').then(response => {
-	    	//return response.json();
-	    	return mock;
-	    }).catch(error => {
-	    	//return error;
-	    	return mock;
-	    });
-	}
+    static getDatatablesData() {
+        return fetch('http://localhost:5000/api/v1/datatables').then(response => {
+            //return response.json();
+            return mock;
+        }).catch(error => {
+            //return error;
+            return mock;
+        });
+    }
 };
 
 export default DatatablesApi;
