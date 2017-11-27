@@ -6,6 +6,27 @@ import PropTypes from 'prop-types';
 
 
 const DataTables = ({data}) => {
+	let hitsSum 		= 0,
+		uniqueSum 		= 0,
+		regsSum 		= 0,
+		demoregsSum 	= 0,
+		conversionSum 	= 0,
+		depositSum 		= 0,
+		ftdSum 			= 0,
+		dealsSum 		= 0,
+		profitSum 		= 0;
+	for (let i = 0, l = data.length; i < l; i++) {
+		hitsSum 		+= data[i].hits;
+		uniqueSum 		+= data[i].unique;
+		regsSum 		+= data[i].regs;
+		demoregsSum 	+= data[i].demoregs;
+		conversionSum 	+= data[i].conversion;
+		depositSum 		+= data[i].deposit;
+		ftdSum 			+= data[i].ftd;
+		dealsSum 		+= data[i].deals;
+		profitSum 		+= data[i].profit;
+	}
+
 	return (
     	<table id="FWtest" className="display responsive nowrap" width="100%" cellSpacing="0">
         	<thead>
@@ -41,15 +62,15 @@ const DataTables = ({data}) => {
         	<tfoot>
             	<tr>
 	                <th>Total</th>
-	                <th>0</th>
-	                <th>0</th>
-	                <th>1</th>
-	                <th>1</th>
-	                <th>0</th>
-	                <th>6</th>
-	                <th>0</th>
-	                <th>438</th>
-	                <th>$49.86</th>
+	                <th>{hitsSum}</th>
+	                <th>{uniqueSum}</th>
+	                <th>{regsSum}</th>
+	                <th>{demoregsSum}</th>
+	                <th>{conversionSum}</th>
+	                <th>{depositSum}</th>
+	                <th>{ftdSum}</th>
+	                <th>{dealsSum}</th>
+	                <th>${profitSum}</th>
             	</tr>
         	</tfoot>
     	</table>
