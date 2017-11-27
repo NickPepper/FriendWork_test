@@ -101,7 +101,7 @@ CatPage.propTypes = {
 
 function collectCatHobbies(hobbies, cat) {
 	let selected = hobbies.map(hobby => {
-    	if (cat.hobby_ids.filter(hobbyId => hobbyId  hobby.id).length > 0) {
+    	if (cat.hobby_ids.filter(hobbyId => hobbyId == hobby.id).length > 0) {
     		return hobby;
     	}
 	});
@@ -111,7 +111,7 @@ function collectCatHobbies(hobbies, cat) {
 
 function hobbiesForCheckBoxes(hobbies, cat=null) {
 	return hobbies.map(hobby => {
-	    if (cat && cat.hobby_ids.filter(hobbyId => hobbyId  hobby.id).length > 0) {
+	    if (cat && cat.hobby_ids.filter(hobbyId => hobbyId == hobby.id).length > 0) {
 	    	hobby['checked'] = true;
 	    } else {
 	    	hobby['checked'] = false;
