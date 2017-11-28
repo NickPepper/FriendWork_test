@@ -42,4 +42,5 @@ class DatatablesApi {
     }
 };
 
+
 export default DatatablesApi;
