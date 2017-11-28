@@ -14,7 +14,7 @@ const DataTables = ({data}) => {
         depositSum      = 0,
         ftdSum          = 0,
         dealsSum        = 0,
-        profitSum       = 0;
+        profitSum       = 0.0;
     for (let i = 0, l = data.length; i < l; i++) {
         hitsSum         += data[i].hits;
         uniqueSum       += data[i].unique;
@@ -24,8 +24,9 @@ const DataTables = ({data}) => {
         depositSum      += data[i].deposit;
         ftdSum          += data[i].ftd;
         dealsSum        += data[i].deals;
-        profitSum       += data[i].profit;
+        profitSum       += parseFloat(data[i].profit);
     }
+    profitSum = profitSum.toFixed(2);
 
     return (
         <table id="FWtest" className="display responsive nowrap" width="100%" cellSpacing="0">
