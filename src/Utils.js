@@ -9,7 +9,7 @@ let mock = [
 
 class Utils {
 
-	static getRandomInt(min, max) {
+    static getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
@@ -18,7 +18,7 @@ class Utils {
     }
 
     static getMockRows() {
-    	// re-fill mock array with random data
+        // re-fill mock array with random data
         for(let i = 0, l = mock.length; i < l; i++) {
             mock[i].hits        = Utils.getRandomInt(0, 128);
             mock[i].unique      = Utils.getRandomInt(0, 128);
