@@ -17,8 +17,10 @@
             $table.css("visibility", 'hidden');
             // we set the timeout here to avoid the "This table has no data" message from DataTables,
             // which prevents the table from correct initialization on jQuery side because
-            // React takes some time before render the component.
-            // We cannot place the $ inside the React's componentDidMount() because React hates jQuery (I do too).
+            // Webpack and React take some time before rendering the table component.
+            // We cannot place the $ inside, for example, the React's componentDidMount()
+            // because React hates jQuery (exactly as I do too :).
+            // This crappy hack is actually needed only in Webpack's developer mode.
             window.setTimeout(function() {
                 $table.DataTable({
                     responsive: true,
