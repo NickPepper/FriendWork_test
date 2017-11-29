@@ -42,13 +42,11 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header 
-                    text="Reactive DataTables"/>
+                <Header text="Reactive DataTables"/>
                 <p>This is the test made for the <a href="https://friend.work/" target="_blank" rel="noopener noreferrer">&laquo;FriendWork&raquo;</a> company by Nick Pershin.</p>
                 <p>As a smart table was the jQuery's <a href="https://datatables.net/" target="_blank" rel="noopener noreferrer">DataTables</a> used.<br/>To see why this table is smart, please resize the browser window narroving it's width - you'll see how the table below responses to the screen width changes.</p>
                 <p>&nbsp;</p>
-                <DataTables
-                    data={this.props.data} />
+                <DataTables data={this.props.data} />
                 <Footer/>
             </div>
         );
